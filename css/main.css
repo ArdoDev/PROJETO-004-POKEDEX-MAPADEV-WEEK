@@ -3,16 +3,18 @@
     margin: 0;
     box-sizing: border-box;
 }
-ul{
+
+ul {
     list-style: none;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
 }
 
 main {
     min-height: 100vh;
-    background-color: rgb(202, 201, 200);
+    background-color: rgb(223, 223, 223);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,6 +24,7 @@ main {
     display: flex;
     gap: 30px;
     padding: 30px 0;
+  
 }
 
 .card-pokemon {
@@ -30,37 +33,37 @@ main {
     border-radius: 10px;
 }
 
-.lista{
+.lista {
     max-width: 200px;
 }
 
-.lista li{
+.lista li {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 10px;
     background-color: rgb(173, 173, 173);
     color: rgb(0, 0, 0);
     padding: 0 5px;
     cursor: pointer;
-    border-top-left-radius: 30px ;
-    border-bottom-left-radius: 30px ;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
     min-height: 70px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 10px;
     transition: 0.15s ease-in-out;
-}   
+}
 
-.lista li:hover{
+.lista li:hover {
     transform: scale(1.05);
 }
 
-.lista li span{
+.lista li span {
     padding-right: 20px;
 }
 
-.lista .ativo{
-    background-color: #FA6668; 
+.lista .ativo {
+    background-color: #ffffff;
 }
 
 .lista img {
@@ -120,37 +123,115 @@ main {
 .habilidades {
     font-size: 15px;
     padding: 0px;
-    width: 150px;
+    width: 125px;
 }
 
-.card-infos .habilidades ul li, 
-.card-infos .status ul li{
+.card-infos .habilidades ul li,
+.card-infos .status ul li {
     padding: 0 0 12px;
     border-bottom: 1px rgb(207, 207, 207) solid;
     margin-bottom: 8px;
     font-size: 15px;
 }
 
-.card-pokemon.aberto{
+.card-pokemon.aberto {
     display: block;
 }
 
-.tipo-fogo{
-    background: color #ed8a8b;
+.tipo-fogo {
+    background-color: #ed8a8b;
 }
 
-.tipo-eletrico{
+.tipo-planta {
+    background-color: #35d8a7;
+}
+
+.tipo-eletrico {
     background-color: #fcc719;
 }
 
-.tipo-agua{
+.tipo-agua {
     background-color: #76BEFE;
 }
 
-.tipo-dark{
+.tipo-fantasma {
     background-color: #BA68C8;
 }
 
-.tipo-dragao{
-    background-color: #c29791;
+.tipo-dragao {
+    background-color: #ad893b;
+}
+
+/*responsivo*/
+
+@media (max-width: 750px) {
+    body {
+        font-size: 12px;
+    }
+
+    .pokedex {
+        flex-direction: column;
+        padding: 30px 0;
+    }
+
+    .card-pokemon {
+        max-width: 300px;
+    }
+
+    .card-pokemon .card-img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .card-pokemon .card-infos {
+        padding: 60px 15px 15px;
+        margin-top: -50px;
+    }
+    .lista{
+
+            max-width: 300px;
+     
+    }
+
+    .lista ul{
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;     
+    }
+
+    .lista li{
+        display: flex;
+        width: 140px;
+        margin: 3px;
+    }
+    .lista li span
+    .card-infos .status, .habilidades {
+       margin: 5px;
+    }
+
+    .card-pokemon .card-infos h3{
+        font-size: 16px;
+    }
+
+    .card-infos h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid grey;
+    }
+    
+    .card-infos .status,
+    .habilidades {
+        font-size: 15px;
+        padding: 0px;
+        width:110px;
+    }
+    
+    .card-infos .habilidades ul li,
+    .card-infos .status ul li {
+        padding: 0 0 12px;
+        border-bottom: 1px rgb(207, 207, 207) solid;
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+
 }
